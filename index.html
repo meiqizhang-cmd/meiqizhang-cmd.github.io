@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meiqi Zhang – Academic Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="logo">Meiqi Zhang</span>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="cv/Meiqi_Zhang_CV.pdf" target="_blank">CV</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="avatar">MZ</div>
+  <h1>Meiqi Zhang</h1>
+  <p class="subtitle">B.S. Financial Mathematics &amp; Statistics · The University of Sydney</p>
+  <p class="location">📍 Sydney, Australia &nbsp;·&nbsp; GPA 4.0 / 4.0 · Dalyell Scholar</p>
+  <div class="links">
+    <a href="mailto:mzha0746@uni.sydney.edu.au" class="primary">✉ mzha0746@uni.sydney.edu.au</a>
+    <a href="https://github.com/meiqizhang-cmd" class="secondary" target="_blank">⌥ GitHub</a>
+    <a href="cv/Meiqi_Zhang_CV.pdf" class="secondary" target="_blank">↓ CV</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <p>
+      Financial Mathematics &amp; Statistics graduate from the University of Sydney (GPA 4.0, Dalyell Scholar),
+      incoming M.Sc. Computer Science at the University of Hong Kong (Delta X Tech Immersion Fellowship).
+      My work sits at the intersection of <strong>mathematical optimization</strong>,
+      <strong>stochastic programming</strong>, and <strong>quantitative finance</strong> — from
+      cardinality-constrained portfolio MIQP solved via Lagrangian relaxation, to two-stage stochastic
+      programs solved with the L-shaped method, to LLM-guided reinforcement learning for portfolio management.
+      Actively seeking graduate study and research opportunities in operations research and quantitative modeling.
+    </p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-item">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <h3>The University of Hong Kong</h3>
+        <p class="degree">M.Sc., Computer Science &nbsp;·&nbsp; Entry Sep 2026 (admitted) &nbsp;·&nbsp; Hong Kong</p>
+        <span class="gpa">Delta X Tech Immersion Fellowship</span>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-icon">🏫</div>
+      <div class="edu-body">
+        <h3>The University of Sydney</h3>
+        <p class="degree">B.S., Financial Mathematics and Statistics &nbsp;·&nbsp; Feb 2025 – Jun 2026 &nbsp;·&nbsp; Sydney, Australia</p>
+        <span class="gpa">GPA 4.0 / 4.0 · Dalyell Scholar</span>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-icon">🌏</div>
+      <div class="edu-body">
+        <h3>Shanghai Jiao Tong University</h3>
+        <p class="degree">Exchange Program, Statistics &nbsp;·&nbsp; Dec 2025 – Feb 2026 &nbsp;·&nbsp; Shanghai, China</p>
+        <span class="gpa">Mathematical Finance · Stochastic Processes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Optimization Projects</h2>
+    <div class="project-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation</h3>
+          <span class="project-date">Feb – Apr 2026</span>
+        </div>
+        <p class="project-desc">
+          Extends Markowitz mean-variance optimization to the NP-hard cardinality-constrained setting
+          (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak subgradient
+          updates for large universes — validated on S&amp;P 500 constituent data.
+        </p>
+        <ul class="project-highlights">
+          <li>Lagrangian decomposition: convex QP x-subproblem (CVXPY/OSQP) + closed-form greedy z-subproblem; &lt;2% optimality gap at a fraction of MIQP solve time.</li>
+          <li>Scalability study N = 50 → 500, rolling out-of-sample backtest, Ledoit-Wolf shrinkage, and a robust-optimization extension with ellipsoidal uncertainty sets.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Gurobi</span><span class="tag">CVXPY</span>
+          <span class="tag">MIQP</span><span class="tag">Lagrangian Relaxation</span><span class="tag">Backtesting</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/meiqizhang-cmd/large-scale-portfolio-optimization" target="_blank">⌥ GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Two-Stage Stochastic Portfolio Optimization via the L-Shaped Method</h3>
+          <span class="project-date">Apr – Jun 2026</span>
+        </div>
+        <p class="project-desc">
+          Two-stage stochastic program (SAA over 500 bootstrap scenarios from real ETF data) with CVaR risk
+          linearized per Rockafellar-Uryasev; solved via the L-shaped (Benders) method and progressive hedging.
+        </p>
+        <ul class="project-highlights">
+          <li>L-shaped master accumulates optimality cuts from stage-2 LP duals; single-cut and multi-cut variants with certified UB/LB convergence.</li>
+          <li>Quantified VSS and EVPI against expected-value and wait-and-see benchmarks; out-of-sample backtest shows the SP portfolio dominating the EV portfolio on CVaR and Sharpe.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">CVXPY</span><span class="tag">Stochastic Programming</span>
+          <span class="tag">L-Shaped / Benders</span><span class="tag">CVaR</span><span class="tag">Progressive Hedging</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/meiqizhang-cmd/stochastic-portfolio-optimization" target="_blank">⌥ GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <h2 class="section-title">Research</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>GIFT: LLM-Guided State-Reward Interface Design for Financial RL</h3>
+          <span class="project-date">Mar – May 2026</span>
+        </div>
+        <p class="project-desc">
+          Core member. Embeds LLM code generation into a PPO portfolio-RL pipeline — the LLM designs state and
+          reward interfaces instead of trading directly, avoiding online-inference latency. Submitted to
+          ACL ARR May 2026 (target: EMNLP 2026).
+        </p>
+        <div class="tag-row">
+          <span class="tag">Reinforcement Learning</span><span class="tag">LLM</span><span class="tag">PPO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Mixed-Initiative AI Assistant for Reading 10-K Filings</h3>
+          <span class="project-date">May 2026 – Present</span>
+        </div>
+        <p class="project-desc">
+          First author (in preparation, target: CHI). Dual-panel system with in-situ explanation, reasoning
+          visualization and source tracing; controlled experiments (N=24×3) raised hallucination detection
+          from 52% to 78%.
+        </p>
+        <div class="tag-row">
+          <span class="tag">HCI</span><span class="tag">LLM</span><span class="tag">User Study</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>AutoInteract: Cross-Cultural LLM HCI via Meta-Interaction Steps</h3>
+          <span class="project-date">Jul – Aug 2025</span>
+        </div>
+        <p class="project-desc">
+          First author, published at IEEE CIPAE 2025 (EI-indexed). Decomposes cross-cultural tutoring tasks
+          into meta-interaction step sequences; CLeIDS dataset; TSR exceeds ReAct/TPTU baselines by ~47% at 69B scale.
+        </p>
+        <div class="tag-row">
+          <span class="tag">LLM Agents</span><span class="tag">Dataset</span><span class="tag">IEEE CIPAE</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>SLAM Point-Cloud Segmentation &amp; Vegetation Detection</h3>
+          <span class="project-date">Sep 2024 – May 2025</span>
+        </div>
+        <p class="project-desc">
+          Research assistant; second author on a SCI JCR Q2 journal paper. Fine-tuned PointNet/PointCNN
+          architectures and loss functions, improving vegetation IoU by 12%.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Deep Learning</span><span class="tag">Point Clouds</span><span class="tag">SCI Q2</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h4>Programming</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span><span class="skill-tag">R</span><span class="skill-tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Optimization</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">MIQP / MILP</span><span class="skill-tag">Lagrangian Relaxation</span>
+          <span class="skill-tag">Benders / L-Shaped</span><span class="skill-tag">Stochastic Programming</span>
+          <span class="skill-tag">CVaR</span><span class="skill-tag">Robust Optimization</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>ML &amp; Statistics</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">PyTorch / TensorFlow</span><span class="skill-tag">Stable-Baselines3</span>
+          <span class="skill-tag">LSTM</span><span class="skill-tag">Reinforcement Learning</span>
+          <span class="skill-tag">Time-Series Forecasting</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Libraries &amp; Tools</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Gurobi</span><span class="skill-tag">CVXPY</span>
+          <span class="skill-tag">NumPy</span><span class="skill-tag">pandas</span>
+          <span class="skill-tag">scikit-learn</span><span class="skill-tag">Git</span>
+          <span class="skill-tag">LaTeX</span><span class="skill-tag">Wind / Bloomberg</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    Meiqi Zhang &nbsp;·&nbsp;
+    <a href="mailto:mzha0746@uni.sydney.edu.au">mzha0746@uni.sydney.edu.au</a> &nbsp;·&nbsp;
+    <a href="https://github.com/meiqizhang-cmd" target="_blank">GitHub</a>
+  </p>
+  <p style="margin-top:0.4rem;font-size:0.8rem;">The University of Sydney · Sydney, Australia</p>
+</footer>
+
+</body>
+</html>
