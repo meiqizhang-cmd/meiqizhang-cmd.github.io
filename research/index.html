@@ -18,28 +18,23 @@ consistent interest in turning rigorous models into decisions under uncertainty.
 directions also appear as runnable code on the Projects page.
 
 
-  GIFT: LLM-Guided State-Reward Interface Design for Financial RL
+  Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation
   
     
     Link to heading
   
 
-Mar – May 2026 · Core member · Submitted to ACL ARR May 2026 (target: EMNLP 2026)
+Feb – Apr 2026
 
-Embeds LLM code generation into a PPO portfolio-RL pipeline — the LLM designs state and
-reward interfaces instead of trading directly, avoiding online-inference latency.
-Focuses on using language models as interface designers for financial reinforcement learning
-rather than as online decision agents.
+Extends Markowitz mean-variance optimization to the NP-hard cardinality-constrained
+setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak
+subgradient updates for large universes — validated on S&amp;P 500 constituent data.
+Lagrangian decomposition: convex QP x-subproblem (CVXPY/OSQP) &#43; closed-form greedy
+z-subproblem; &lt;2% optimality gap at a fraction of MIQP solve time.
+Scalability study N = 50 → 500, rolling out-of-sample backtest, Ledoit-Wolf shrinkage,
+and a robust-optimization extension with ellipsoidal uncertainty sets.
 
-
-
-  Mixed-Initiative AI Assistant for Reading 10-K Filings
-  
-    
-    Link to heading
-  
-
-May 2026 – Present · First author (in preparation, target: CHI)">
+→ Code &amp; write-up: Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation">
 <meta name="keywords" content="Meiqi Zhang, financial mathematics, statistics, optimization, stochastic programming, quantitative finance, University of Sydney, operations research">
 
 
@@ -47,15 +42,15 @@ May 2026 – Present · First author (in preparation, target: CHI)">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Research">
 	<meta name="twitter:description" content="My research spans optimization, quantitative finance, and human–AI interaction, with a consistent interest in turning rigorous models into decisions under uncertainty. Several directions also appear as runnable code on the Projects page.
-GIFT: LLM-Guided State-Reward Interface Design for Financial RLLink to headingMar – May 2026 · Core member · Submitted to ACL ARR May 2026 (target: EMNLP 2026)
-Embeds LLM code generation into a PPO portfolio-RL pipeline — the LLM designs state and reward interfaces instead of trading directly, avoiding online-inference latency. Focuses on using language models as interface designers for financial reinforcement learning rather than as online decision agents. Mixed-Initiative AI Assistant for Reading 10-K FilingsLink to headingMay 2026 – Present · First author (in preparation, target: CHI)">
+Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian RelaxationLink to headingFeb – Apr 2026
+Extends Markowitz mean-variance optimization to the NP-hard cardinality-constrained setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak subgradient updates for large universes — validated on S&amp;P 500 constituent data. Lagrangian decomposition: convex QP x-subproblem (CVXPY/OSQP) &#43; closed-form greedy z-subproblem; &lt;2% optimality gap at a fraction of MIQP solve time. Scalability study N = 50 → 500, rolling out-of-sample backtest, Ledoit-Wolf shrinkage, and a robust-optimization extension with ellipsoidal uncertainty sets. → Code &amp; write-up: Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation">
 
 <meta property="og:url" content="http://localhost:1313/research/">
 	<meta property="og:site_name" content="Meiqi Zhang">
 	<meta property="og:title" content="Research">
 	<meta property="og:description" content="My research spans optimization, quantitative finance, and human–AI interaction, with a consistent interest in turning rigorous models into decisions under uncertainty. Several directions also appear as runnable code on the Projects page.
-GIFT: LLM-Guided State-Reward Interface Design for Financial RLLink to headingMar – May 2026 · Core member · Submitted to ACL ARR May 2026 (target: EMNLP 2026)
-Embeds LLM code generation into a PPO portfolio-RL pipeline — the LLM designs state and reward interfaces instead of trading directly, avoiding online-inference latency. Focuses on using language models as interface designers for financial reinforcement learning rather than as online decision agents. Mixed-Initiative AI Assistant for Reading 10-K FilingsLink to headingMay 2026 – Present · First author (in preparation, target: CHI)">
+Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian RelaxationLink to headingFeb – Apr 2026
+Extends Markowitz mean-variance optimization to the NP-hard cardinality-constrained setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak subgradient updates for large universes — validated on S&amp;P 500 constituent data. Lagrangian decomposition: convex QP x-subproblem (CVXPY/OSQP) &#43; closed-form greedy z-subproblem; &lt;2% optimality gap at a fraction of MIQP solve time. Scalability study N = 50 → 500, rolling out-of-sample backtest, Ledoit-Wolf shrinkage, and a robust-optimization extension with ellipsoidal uncertainty sets. → Code &amp; write-up: Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 
@@ -187,6 +182,25 @@ Embeds LLM code generation into a PPO portfolio-RL pipeline — the LLM designs 
     <p>My research spans <strong>optimization, quantitative finance, and human–AI interaction</strong>, with a
 consistent interest in turning rigorous models into decisions under uncertainty. Several
 directions also appear as runnable code on the <a href="/projects/" >Projects</a> page.</p>
+<hr>
+<h2 id="large-scale-portfolio-optimization-cardinality-constrained-miqp--lagrangian-relaxation">
+  Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation
+  <a class="heading-link" href="#large-scale-portfolio-optimization-cardinality-constrained-miqp--lagrangian-relaxation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><em>Feb – Apr 2026</em></p>
+<ul>
+<li>Extends Markowitz mean-variance optimization to the NP-hard <strong>cardinality-constrained</strong>
+setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak
+subgradient updates for large universes — validated on S&amp;P 500 constituent data.</li>
+<li><strong>Lagrangian decomposition:</strong> convex QP x-subproblem (CVXPY/OSQP) + closed-form greedy
+z-subproblem; &lt;2% optimality gap at a fraction of MIQP solve time.</li>
+<li><strong>Scalability study</strong> N = 50 → 500, rolling out-of-sample backtest, Ledoit-Wolf shrinkage,
+and a robust-optimization extension with ellipsoidal uncertainty sets.</li>
+</ul>
+<p>→ Code &amp; write-up: <a href="/projects/portfolio-miqp/" >Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation</a></p>
 <hr>
 <h2 id="gift-llm-guided-state-reward-interface-design-for-financial-rl">
   GIFT: LLM-Guided State-Reward Interface Design for Financial RL
