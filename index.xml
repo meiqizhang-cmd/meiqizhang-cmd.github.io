@@ -1,45 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Meiqi Zhang</title>
-		<link>http://localhost:1313/</link>
-		<description>Recent content on Meiqi Zhang</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Two-Stage Stochastic Portfolio Optimization via the L-Shaped Method</title>
-				<link>http://localhost:1313/projects/stochastic-portfolio/</link>
-				<pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/projects/stochastic-portfolio/</guid>
-				<description>&lt;p&gt;Two-stage stochastic program (SAA over 500 bootstrap scenarios from real ETF data) with&#xA;&lt;strong&gt;CVaR&lt;/strong&gt; risk linearized per Rockafellar–Uryasev; solved via the &lt;strong&gt;L-shaped (Benders)&lt;/strong&gt; method&#xA;and progressive hedging.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation</title>
-				<link>http://localhost:1313/projects/portfolio-miqp/</link>
-				<pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/projects/portfolio-miqp/</guid>
-				<description>&lt;p&gt;Extends Markowitz mean-variance optimization to the NP-hard &lt;strong&gt;cardinality-constrained&lt;/strong&gt;&#xA;setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak&#xA;subgradient updates for large universes — validated on S&amp;amp;P 500 constituent data.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>About</title>
-				<link>http://localhost:1313/about/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/about/</guid>
-				<description>&lt;p&gt;I am &lt;strong&gt;Meiqi Zhang&lt;/strong&gt;, a Financial Mathematics &amp;amp; Statistics graduate from the&#xA;&lt;strong&gt;University of Sydney&lt;/strong&gt; (GPA 4.0, Dalyell Scholar), and an incoming &lt;strong&gt;M.Sc. Computer Science&lt;/strong&gt;&#xA;student at the &lt;strong&gt;University of Hong Kong&lt;/strong&gt; (Delta X Tech Immersion Fellowship).&lt;/p&gt;&#xA;&lt;p&gt;My work sits at the intersection of &lt;strong&gt;mathematical optimization&lt;/strong&gt;, &lt;strong&gt;stochastic programming&lt;/strong&gt;,&#xA;and &lt;strong&gt;quantitative finance&lt;/strong&gt; — from cardinality-constrained portfolio MIQP solved via&#xA;Lagrangian relaxation, to two-stage stochastic programs solved with the L-shaped method, to&#xA;LLM-guided reinforcement learning for portfolio management. I am actively seeking graduate&#xA;study and research opportunities in operations research and quantitative modeling.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Research</title>
-				<link>http://localhost:1313/research/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/research/</guid>
-				<description>&lt;p&gt;My research spans &lt;strong&gt;optimization, quantitative finance, and human–AI interaction&lt;/strong&gt;, with a&#xA;consistent interest in turning rigorous models into decisions under uncertainty. Several&#xA;directions also appear as runnable code on the &lt;a href=&#34;http://localhost:1313/projects/&#34; &gt;Projects&lt;/a&gt; page.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;large-scale-portfolio-optimization-cardinality-constrained-miqp--lagrangian-relaxation&#34;&gt;&#xD;&#xA;  Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp;amp; Lagrangian Relaxation&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#large-scale-portfolio-optimization-cardinality-constrained-miqp--lagrangian-relaxation&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;&lt;em&gt;Feb – Apr 2026&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Extends Markowitz mean-variance optimization to the NP-hard &lt;strong&gt;cardinality-constrained&lt;/strong&gt;&#xA;setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak&#xA;subgradient updates for large universes — validated on S&amp;amp;P 500 constituent data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Lagrangian decomposition:&lt;/strong&gt; convex QP x-subproblem (CVXPY/OSQP) + closed-form greedy&#xA;z-subproblem; &amp;lt;2% optimality gap at a fraction of MIQP solve time.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scalability study&lt;/strong&gt; N = 50 → 500, rolling out-of-sample backtest, Ledoit-Wolf shrinkage,&#xA;and a robust-optimization extension with ellipsoidal uncertainty sets.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;→ Code &amp;amp; write-up: &lt;a href=&#34;http://localhost:1313/projects/portfolio-miqp/&#34; &gt;Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp;amp; Lagrangian Relaxation&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meiqi Zhang</title><link>https://meiqizhang-cmd.github.io/</link><description>Recent content on Meiqi Zhang</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://meiqizhang-cmd.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Two-Stage Stochastic Portfolio Optimization via the L-Shaped Method</title><link>https://meiqizhang-cmd.github.io/projects/stochastic-portfolio/</link><pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate><guid>https://meiqizhang-cmd.github.io/projects/stochastic-portfolio/</guid><description>&lt;p&gt;Two-stage stochastic program (SAA over 500 bootstrap scenarios from real ETF data) with
+&lt;strong&gt;CVaR&lt;/strong&gt; risk linearized per Rockafellar–Uryasev; solved via the &lt;strong&gt;L-shaped (Benders)&lt;/strong&gt; method
+and progressive hedging.&lt;/p&gt;</description></item><item><title>GIFT: LLM-Guided State-Reward Interface Design for Financial RL</title><link>https://meiqizhang-cmd.github.io/projects/gift-financial-rl/</link><pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate><guid>https://meiqizhang-cmd.github.io/projects/gift-financial-rl/</guid><description>&lt;p&gt;Embeds LLM code generation into a &lt;strong&gt;PPO portfolio-RL&lt;/strong&gt; pipeline — the LLM designs &lt;strong&gt;state and
+reward interfaces&lt;/strong&gt; instead of trading directly, avoiding online-inference latency.
+Focuses on using language models as interface designers for financial reinforcement learning
+rather than as online decision agents.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mar – May 2026 · Core member · Submitted to ACL ARR May 2026 (target: EMNLP 2026)&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Mixed-Initiative AI Assistant for Reading 10-K Filings</title><link>https://meiqizhang-cmd.github.io/projects/financial-10k-assistant/</link><pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate><guid>https://meiqizhang-cmd.github.io/projects/financial-10k-assistant/</guid><description>&lt;p&gt;Dual-panel system with &lt;strong&gt;in-situ explanation&lt;/strong&gt;, &lt;strong&gt;reasoning visualization&lt;/strong&gt;, and &lt;strong&gt;source
+tracing&lt;/strong&gt; for reading lengthy SEC filings. Controlled experiments (N=24×3) raised
+hallucination detection from &lt;strong&gt;52% to 78%&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;May 2026 – Present · First author (in preparation, target: CHI)&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp; Lagrangian Relaxation</title><link>https://meiqizhang-cmd.github.io/projects/portfolio-miqp/</link><pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate><guid>https://meiqizhang-cmd.github.io/projects/portfolio-miqp/</guid><description>&lt;p&gt;Extends Markowitz mean-variance optimization to the NP-hard &lt;strong&gt;cardinality-constrained&lt;/strong&gt;
+setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak
+subgradient updates for large universes — validated on S&amp;amp;P 500 constituent data.&lt;/p&gt;</description></item><item><title>SLAM Point-Cloud Segmentation &amp; Vegetation Detection</title><link>https://meiqizhang-cmd.github.io/projects/slam-point-cloud/</link><pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate><guid>https://meiqizhang-cmd.github.io/projects/slam-point-cloud/</guid><description>&lt;p&gt;Fine-tuned &lt;strong&gt;PointNet / PointCNN&lt;/strong&gt; architectures and loss functions for vegetation
+segmentation in SLAM point clouds. Improved vegetation IoU by &lt;strong&gt;12%&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sep 2024 – May 2025 · Research assistant · Second author on a SCI JCR Q2 journal paper&lt;/em&gt;&lt;/p&gt;</description></item><item><title>About</title><link>https://meiqizhang-cmd.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meiqizhang-cmd.github.io/about/</guid><description>&lt;p&gt;I am &lt;strong&gt;Meiqi Zhang&lt;/strong&gt;, a Financial Mathematics &amp;amp; Statistics graduate from the
+&lt;strong&gt;University of Sydney&lt;/strong&gt; (GPA 4.0, Dalyell Scholar), and an incoming &lt;strong&gt;M.Sc. Computer Science&lt;/strong&gt;
+student at the &lt;strong&gt;University of Hong Kong&lt;/strong&gt; (Delta X Tech Immersion Fellowship).&lt;/p&gt;
+&lt;p&gt;My work sits at the intersection of &lt;strong&gt;mathematical optimization&lt;/strong&gt;, &lt;strong&gt;stochastic programming&lt;/strong&gt;,
+and &lt;strong&gt;quantitative finance&lt;/strong&gt; — from cardinality-constrained portfolio MIQP solved via
+Lagrangian relaxation, to two-stage stochastic programs solved with the L-shaped method, to
+LLM-guided reinforcement learning for portfolio management. I am actively seeking graduate
+study and research opportunities in operations research and quantitative modeling.&lt;/p&gt;</description></item><item><title>Research</title><link>https://meiqizhang-cmd.github.io/research/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://meiqizhang-cmd.github.io/research/</guid><description>&lt;p&gt;My research spans &lt;strong&gt;optimization, quantitative finance, and human–AI interaction&lt;/strong&gt;, with a
+consistent interest in turning rigorous models into decisions under uncertainty. Several
+directions also appear as runnable code on the &lt;a href="https://meiqizhang-cmd.github.io/projects/" &gt;Projects&lt;/a&gt; page.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="large-scale-portfolio-optimization-cardinality-constrained-miqp--lagrangian-relaxation"&gt;
+ Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp;amp; Lagrangian Relaxation
+ &lt;a class="heading-link" href="#large-scale-portfolio-optimization-cardinality-constrained-miqp--lagrangian-relaxation"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Feb – Apr 2026&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extends Markowitz mean-variance optimization to the NP-hard &lt;strong&gt;cardinality-constrained&lt;/strong&gt;
+setting (hold ≤ K assets): exact MIQP via Gurobi, and Lagrangian relaxation with Polyak
+subgradient updates for large universes — validated on S&amp;amp;P 500 constituent data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lagrangian decomposition:&lt;/strong&gt; convex QP x-subproblem (CVXPY/OSQP) + closed-form greedy
+z-subproblem; &amp;lt;2% optimality gap at a fraction of MIQP solve time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scalability study&lt;/strong&gt; N = 50 → 500, rolling out-of-sample backtest, Ledoit-Wolf shrinkage,
+and a robust-optimization extension with ellipsoidal uncertainty sets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;→ Code &amp;amp; write-up: &lt;a href="https://meiqizhang-cmd.github.io/projects/portfolio-miqp/" &gt;Large-Scale Portfolio Optimization: Cardinality-Constrained MIQP &amp;amp; Lagrangian Relaxation&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
